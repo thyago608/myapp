@@ -1,0 +1,29 @@
+.main-select-team{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    row-gap: 2rem;
+  
+    & #card-component{
+      width: 13.5rem;
+      height: 13.5rem;
+    }
+  
+    @media(max-width: 800px){
+      & #card-component:first-child{
+        margin-top: 2rem;
+      } 
+      & #card-component:last-child {
+        margin-bottom: 2rem;
+      }
+    }
+  
+    @media(min-width: 800px){
+      &{
+        grid-template-columns: repeat(2, 1fr);
+        height: calc(100vh - 150px);
+        row-gap: 1rem;
+      }
+    }
+  }
