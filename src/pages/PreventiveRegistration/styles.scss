@@ -1,40 +1,57 @@
 .page-preventive-registration{
-    max-width: 720px;
-    margin-top: 10rem;
-  
-    form{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      input{
-        max-width: 300px;
-        height: 2.5rem;
-        border: 0;
-        border-radius: 0.2rem;
-        background: #5a504d;
-        padding: 0 1.2rem;
-        font-weight: 500;
-        letter-spacing: 1px;
-        color: var(--gray-100);
-        outline: transparent;
-  
-        &::placeholder{
-          color: white;
-          font-weight: 400;
+    max-width: 800px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+
+.main-preventive-registration{
+    form{    
+        button{
+            margin-top: 2rem;
+            width: 180px;
+            height: 2.6rem;
+            font-size: 1rem;
         }
-  
-        &::-webkit-inner-spin-button{
-          opacity: 0;
+
+        .input-block-component:last-of-type{
+            label{
+                text-transform: uppercase;
+            }
         }
-        
-      }
-  
-      button{
-        flex: none;
-        width: 160px;
-        margin-top: 2rem;
-      }
-  
     }
-  }
+
+
+    .preventives-completed-admin{
+        margin: 3rem 0;
+
+        .wrapper-preventives-completed-admin{
+            margin-top: 2rem;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            align-items: center;
+
+            @media(min-width: 720px){
+                grid-template-columns: repeat(3,1fr);
+                justify-items: start;
+            }
+        }
+
+        @media(max-width: 720px){
+            h1{
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+.wrapper-preventives-completed-admin{
+    button{
+        & + button{
+            margin-top: 1rem;
+        }
+    }
+}

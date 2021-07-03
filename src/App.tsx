@@ -1,4 +1,4 @@
-import { Routes } from "../routes";
+import { Routes } from './routes';
 import "./styles/global.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

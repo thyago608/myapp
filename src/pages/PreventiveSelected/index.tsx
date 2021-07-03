@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { Header } from "../../components/Header";
 import logoImg from "../../assets/images/icon-scheffer-secundary.svg";
-import "./styles.scss";
 import { Button } from "../../components/Button";
+import "./styles.scss";
 
 type Params = {
   preventive: string;
