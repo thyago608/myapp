@@ -1,3 +1,4 @@
+import { useRef, FormEvent } from 'react';
 import { useParams } from "react-router-dom";
 import { Header } from "../../components/Header";
 import logoImg from "../../assets/images/icon-scheffer-secundary.svg";
@@ -11,6 +12,14 @@ type Params = {
 
 export function PreventiveSelected() {
   const { preventive, local } = useParams<Params>();
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  function handleCurrentValue(e:FormEvent){
+    e.preventDefault();
+
+     console.log(inputRef.current?.value);
+  }
+
 
   return (
     <div id="page" className="page-preventive-selected">
@@ -23,29 +32,21 @@ export function PreventiveSelected() {
           <div className="container-info-preventive-selected">
             <h1>{preventive}</h1>
             <span>{local}</span>
+
+            <span>Cód. plano: PM104812</span>
+            <span>SBEGTRIL000-MM</span>
             <a href="#">Ver detalhes</a>
           </div>
         </div>
 
         <form className="form-preventive-selected">
-          <div className="wrapper-date">
-            <span>Data de conclusão:</span>
-            <div className="container-input-block">
-              <div className="input-block">
-                <label htmlFor="day">Dia</label>
-                <input type="text" id="day" />
-              </div>
-              <div className="input-block">
-                <label htmlFor="month">Mês</label>
-                <input type="text" id="month" />
-              </div>
-              <div className="input-block">
-                <label htmlFor="year">Ano</label>
-                <input type="text" id="year" />
-              </div>
-            </div>
-          </div>
-          <Button title="Enviar" />
+          <label>Data de conclusão</label>
+          <input type="date" ref={inputRef}/>
+          <label>Hora início</label>
+          <input type="time"/>
+          <label>Hora fim</label>
+          <input type="time"/>
+          <Button title="Enviar" onClick={handleCurrentValue}/>
         </form>
       </main>
     </div>

@@ -1,7 +1,8 @@
 .main-preventive-selected{
     max-width: 720px;
     border-radius: 0.8rem;
-    margin-top: 2rem;
+    margin: 2rem auto 2rem;
+   
     background: var(--brown-500);
     padding:2rem;
   }
@@ -80,84 +81,46 @@
   
   
   .form-preventive-selected{
-    margin-top: 3rem;
-  
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
-  
-    .wrapper-date{
-      display: flex;
-      align-items: flex-end;
-      flex-wrap: wrap;
-  
-      span{
-        margin-right: 1rem;
-      }
-  
-      .container-input-block{
-        display: flex;
-      }
-  
-  
-      @media(max-width:450px){
-        &{
-          justify-content: center;
-        }
-    
-        span{
-          margin: 0 auto;
-    
-        }
-    
-        .container-input-block{
-          margin-top:1.5rem;
-        }
-      }
-  
+
+    label{
+      margin: 1rem 0;
     }
-  
+
+    input[type="date"], 
+    input[type="time"]{
+      border: 0;
+      border-radius: 0.5rem;
+      color: var(--gray-100);
+      letter-spacing: 1px;
+      outline: transparent;
+      background: #686262;
+      padding: 0.5rem;
+
+      @media(min-width: 550px){
+          width: 90%;
+      }
+
+      @media(min-width: 620px){
+        width: 80%;
+     }
+
+      @media(min-width: 700px){
+      width: 70%;
+      }
+      
+      @media(min-width: 700px){
+        width: 50%;
+      }
+    }
     
     button{
-      max-width: 13rem;
-      margin-top: 3rem;
+      width: 10rem;
+      height: 2.8rem;
+      margin-top: 1rem;
     }
     
   }
   
-  
-  .input-block{
-    max-width: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0.6rem;
-    position: relative;
-  
-    label{
-      color: var(--gray-100);
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-  
-     input{
-      width: 100%;
-      height: 2rem;
-      background: rgb(37, 30, 29);
-      border: 0;
-      outline: transparent;
-      color: var(--gray-100);
-      padding: 0 0.5rem;
-    }
-  
-    &::after{
-      content: "";
-      width: 100%;
-      height: 3px;
-      background: var(--orange-400);
-    
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-  
-  }

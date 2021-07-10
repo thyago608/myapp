@@ -3,14 +3,16 @@
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-    row-gap: 2rem;
+    
   
-    & #card-component{
-      width: 13.5rem;
-      height: 13.5rem;
+     #card-component{
+        width: 15rem;
+        height: 15rem;
+        padding: 0 2rem;
     }
   
     @media(max-width: 800px){
+      row-gap: 2rem;
       & #card-component:first-child{
         margin-top: 2rem;
       } 

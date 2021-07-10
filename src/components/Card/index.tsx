@@ -5,9 +5,10 @@ import "./styles.scss";
 type CardProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   title: string;
   subtitle?: string;
+  term?:string;
 }
 
-export function Card({ title, subtitle, ...rest }: CardProps) {
+export function Card({ title, subtitle, term, ...rest }: CardProps) {
   return (
     <button id="card-component" {...rest}>
       <div className="card">
@@ -15,8 +16,9 @@ export function Card({ title, subtitle, ...rest }: CardProps) {
           <img src={logoScheffer} alt="Scheffer icon" />
         </div>
         <span>{title}</span>
+        {subtitle && <span className="subtitle">{subtitle}</span>}
+        {term && <span className="term">{term}</span>}
       </div>
-      {subtitle && <span className="subtitle">{subtitle}</span>}
     </button>
   );
 }
