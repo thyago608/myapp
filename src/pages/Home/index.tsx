@@ -1,7 +1,7 @@
 import { Header } from "../../components/Header";
 import { Card } from "../../components/Card";
 import { useHistory } from "react-router-dom";
-import "./styles.scss";
+import { Main } from "./styles";
 
 export function Home() {
   const history = useHistory();
@@ -15,15 +15,15 @@ export function Home() {
   }
 
   return (
-    <div id="page" className="page-home">
+    <div id="page">
       <Header />
-      <main className="main-home">
+      <Main >
         <Card title="Preventivas" onClick={handleNavigateToSelectTeam} />
         <Card
           title="Cadastrar Preventivas"
           onClick={handleNavigateToPreventiveRegistration}
         />
-      </main>
+      </Main>
     </div>
   );
 }

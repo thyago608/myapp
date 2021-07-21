@@ -1,11 +1,13 @@
-.input-block-component{
+import styled from 'styled-components';
+
+export const Container = styled.div`
     max-width: 500px;
     
     display:flex;
     justify-content: space-between;
     align-items: flex-end;
 
-    & + .input-block-component{
+    & + &{
         margin-top: 0.8rem;
     }
 
@@ -49,7 +51,5 @@
         &:-webkit-autofill {
             -webkit-text-fill-color: white !important;
         }
-
     }
-    
-}
+`;

@@ -1,5 +1,5 @@
 import { useRef, InputHTMLAttributes } from 'react';
-import './styles.scss';
+import { Container } from './styles';
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
     label: string;
@@ -9,7 +9,7 @@ export function Input({label, ...rest}:InputProps){
     const inputRef = useRef<HTMLInputElement>(null);
     
     return(
-        <div className="input-block-component">
+        <Container className="input-block-component">
             <label htmlFor="local">{label} :</label>
             <input 
                 type="text" 
@@ -18,6 +18,6 @@ export function Input({label, ...rest}:InputProps){
                 ref={inputRef}
                 {...rest}
             />
-        </div>
+        </Container>
     );
 }

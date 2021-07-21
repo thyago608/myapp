@@ -1,5 +1,7 @@
-.main-select-team{
-    display: grid;
+import styled from 'styled-components';
+
+export const Main = styled.main`
+display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
@@ -28,4 +30,5 @@
         row-gap: 1rem;
       }
     }
-  }
+
+`;

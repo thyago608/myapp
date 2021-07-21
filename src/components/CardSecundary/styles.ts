@@ -1,5 +1,8 @@
-#card-component-secundary{
-    border: 0;
+import styled from 'styled-components';
+
+export const Wrapper = styled.button`
+
+border: 0;
     width: 14rem;
     min-height: 230px;
     background: var(--brown-500);
@@ -82,4 +85,5 @@
     }
 
   }
-}
+
+`;

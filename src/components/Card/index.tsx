@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 import logoScheffer from "../../assets/images/icon-scheffer-secundary.svg";
-import "./styles.scss";
+import { Wrapper } from "./styles";
+
 
 type CardProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   title: string;
@@ -10,7 +11,7 @@ type CardProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function Card({ title, subtitle, term, ...rest }: CardProps) {
   return (
-    <button id="card-component" {...rest}>
+    <Wrapper id="card-component" {...rest}>
       <div className="card">
         <div className="container-image-card">
           <img src={logoScheffer} alt="Scheffer icon" />
@@ -19,6 +20,6 @@ export function Card({ title, subtitle, term, ...rest }: CardProps) {
         {subtitle && <span className="subtitle">{subtitle}</span>}
         {term && <span className="term">{term}</span>}
       </div>
-    </button>
+    </Wrapper>
   );
 }

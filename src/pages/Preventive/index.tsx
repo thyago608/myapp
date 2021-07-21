@@ -3,7 +3,10 @@ import { useParams, useHistory } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { Card } from "../../components/Card";
 import Slider from "react-slick";
-import "./styles.scss";
+import {
+  Wrapper,
+  Main
+} from './styles';
 
 type Params = {
   team: string;
@@ -74,11 +77,11 @@ export function Preventive() {
 
   return (
     <div id="page" className="page-preventive">
-      <div className="header-preventive">
+      <Wrapper>
         <Header />
         <h1>Equipe {team}</h1>
-      </div>
-      <main className="main-preventive">
+      </Wrapper>
+      <Main>
         <div className="preventive-completed">
           <h2>Preventivas Concluídas</h2>
 
@@ -135,7 +138,7 @@ export function Preventive() {
             })}
           </div>
         </div>
-      </main>
+      </Main>
     </div>
   );
 }

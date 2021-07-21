@@ -1,5 +1,5 @@
-import {ButtonHTMLAttributes} from 'react';
-import './styles.scss';
+import { ButtonHTMLAttributes } from 'react';
+import { ButtonComponent } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     title: string;
@@ -7,6 +7,6 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function Button({title, ...rest}:ButtonProps){
     return (
-        <button {...rest} className="button-component">{title}</button>
+        <ButtonComponent {...rest}>{title}</ButtonComponent>
     );
 }

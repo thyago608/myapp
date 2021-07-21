@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Header } from "../../components/Header";
 import logoImg from "../../assets/images/icon-scheffer-secundary.svg";
 import { Button } from "../../components/Button";
-import "./styles.scss";
+import { Main, Box } from "./styles";
 
 type Params = {
   preventive: string;
@@ -17,15 +17,14 @@ export function PreventiveSelected() {
   function handleCurrentValue(e:FormEvent){
     e.preventDefault();
 
-     console.log(inputRef.current?.value);
   }
 
 
   return (
     <div id="page" className="page-preventive-selected">
       <Header />
-      <main className="main-preventive-selected">
-        <div className="box-preventive">
+      <Main>
+        <Box className="box-preventive">
           <div className="container-image-preventive-selected">
             <img src={logoImg} alt="logo" />
           </div>
@@ -37,7 +36,7 @@ export function PreventiveSelected() {
             <span>SBEGTRIL000-MM</span>
             <a href="#">Ver detalhes</a>
           </div>
-        </div>
+        </Box>
 
         <form className="form-preventive-selected">
           <label>Data de conclusão</label>
@@ -48,7 +47,7 @@ export function PreventiveSelected() {
           <input type="time"/>
           <Button title="Enviar" onClick={handleCurrentValue}/>
         </form>
-      </main>
+      </Main>
     </div>
   );
 }

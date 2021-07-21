@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/images/logo-scheffer.svg";
-import "./styles.scss";
+import { Container } from './styles';
 
 export function Header() {
   return (
-    <header id="component-header">
-      <Link to="/" className="container-image-header">
+    <Container>
+      <Link to="/">
         <img src={logoImg} alt="logo" />
       </Link>
-    </header>
+    </Container>
   );
 }

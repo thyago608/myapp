@@ -1,4 +1,6 @@
-.header-preventive{
+import styled from 'styled-components';
+
+export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     display: flex;
@@ -36,18 +38,21 @@
         justify-content: flex-start;
       }
     }
-  }
-  .main-preventive{
-    margin-top: 2rem;
 
-    #card-component{
-      width: 16rem;
-      height: 20rem;
-    }
+`;
+
+
+export const Main = styled.main`
+   margin-top: 2rem;
+
+  #card-component{
+    width: 16rem;
+    height: 20rem;
   }
-  
+
   .preventive-completed{
     margin: 5rem 0 2rem;
+    
     > h2{
       font-size: 1.7rem;
       margin-bottom: 2rem;
@@ -62,7 +67,7 @@
     
     }
   }
-  
+
   .preventive-accomplish{
     margin: 5rem 0 2rem;
   
@@ -93,3 +98,9 @@
     }
   
   }
+`;
+
+  
+  
+  
+  

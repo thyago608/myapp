@@ -1,5 +1,8 @@
-.page-admin{
-    max-width: 720px;
+import styled from 'styled-components';
+
+
+export const Main = styled.main`
+ max-width: 720px;
     margin-top: 10rem;
   
     form{
@@ -37,4 +40,4 @@
       }
   
     }
-  }
+`;

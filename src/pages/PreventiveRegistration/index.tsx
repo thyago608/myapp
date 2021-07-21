@@ -2,7 +2,7 @@ import { Header } from '../../components/Header';
 import { CardSecundary } from '../../components/CardSecundary';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-import './styles.scss';
+import { Container, Main, Section } from './styles';
 import { useState } from 'react';
 
 type Preventive = {
@@ -27,9 +27,9 @@ export function PreventiveRegistration(){
         {title:"Portal Rejeição", subtitle:"TE - Sistema Verde", dateCompleted:"08/02/21"},
     ]);
     return(
-        <div className="page-preventive-registration">
+        <Container>
             <Header/>
-            <main className="main-preventive-registration">
+            <Main>
              <form action="">
                 <Input label="local" />
                 <Input label="setor" />
@@ -37,7 +37,7 @@ export function PreventiveRegistration(){
                 <Button title="Cadastrar" type="submit"/>
              </form>
 
-             <section className="preventives-completed-admin">
+             <Section className="preventives-completed-admin">
                  <h1>Preventivas Concluídas</h1>
                  <div className="wrapper-preventives-completed-admin">
                  {
@@ -50,8 +50,8 @@ export function PreventiveRegistration(){
                      ))
                  }
                 </div>
-             </section>
-            </main>
-        </div>        
+             </Section>
+            </Main>
+        </Container>        
     );
 }

@@ -1,27 +1,21 @@
-.main-preventive-selected{
+import styled from 'styled-components';
+
+
+export const Main = styled.main`
     max-width: 720px;
     border-radius: 0.8rem;
     margin: 2rem auto 2rem;
    
     background: var(--brown-500);
     padding:2rem;
-  }
-  
-  .box-preventive{
-    display: flex;
-    align-items: center;
-  
-    @media(max-width: 350px){
-      flex-wrap: wrap;  
-  
-      .container-image-preventive-selected{
-        margin-bottom: 2rem;
-      }
-  
-    }
-  }
-  
-  .container-image-preventive-selected{
+
+`;
+
+export const Box = styled.div`
+   display: flex;
+   align-items: center;
+
+   .container-image-preventive-selected{
     margin-right: 3rem;
     filter: brightness(0.9);
   
@@ -38,7 +32,7 @@
     }
   
   }
-  
+
   .container-info-preventive-selected{
     display: flex;
     flex-direction: column;
@@ -78,8 +72,7 @@
       
     }
   }
-  
-  
+
   .form-preventive-selected{
     margin-top: 4rem;
     display: flex;
@@ -123,4 +116,23 @@
     }
     
   }
+  
+
+  
+  @media(max-width: 350px){
+    flex-wrap: wrap;  
+  
+    .container-image-preventive-selected{
+        margin-bottom: 2rem;
+    }  
+  }
+`;
+
+
+  
+ 
+  
+
+  
+  
   

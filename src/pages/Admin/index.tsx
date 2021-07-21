@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom';
 import { FormEvent} from 'react';
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
-import "./styles.scss";
+import { Main} from "./styles";
 
 export function Admin() {
   
@@ -15,14 +15,14 @@ export function Admin() {
   }
 
   return (
-    <div id="page" className="page-admin">
+    <div id="page">
       <Header />
-      <main className="page-admin">
+      <Main className="page-admin">
         <form onSubmit={handleWithLogin}>
           <input type="number" placeholder="Matrícula" />
           <Button title="Entrar" type="submit"/>
         </form>
-      </main>
+      </Main>
     </div>
   );
 }
