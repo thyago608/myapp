@@ -9,6 +9,51 @@ export const Main = styled.main`
     background: var(--brown-500);
     padding:2rem;
 
+
+    .form-preventive-selected{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+
+    label{
+      margin: 1rem 0;
+    }
+
+    input[type="date"], 
+    input[type="time"]{
+      border: 0;
+      border-radius: 0.5rem;
+      color: var(--gray-100);
+      letter-spacing: 1px;
+      outline: transparent;
+      background: #686262;
+      padding: 0.5rem;
+
+      @media(min-width: 550px){
+          width: 90%;
+      }
+
+      @media(min-width: 620px){
+        width: 80%;
+     }
+
+      @media(min-width: 700px){
+      width: 70%;
+      }
+      
+      @media(min-width: 700px){
+        width: 50%;
+      }
+    }
+    
+    button{
+      width: 10rem;
+      height: 2.8rem;
+      margin-top: 1rem;
+    }
+    
+  }
+
 `;
 
 export const Box = styled.div`
@@ -72,52 +117,6 @@ export const Box = styled.div`
       
     }
   }
-
-  .form-preventive-selected{
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-
-    label{
-      margin: 1rem 0;
-    }
-
-    input[type="date"], 
-    input[type="time"]{
-      border: 0;
-      border-radius: 0.5rem;
-      color: var(--gray-100);
-      letter-spacing: 1px;
-      outline: transparent;
-      background: #686262;
-      padding: 0.5rem;
-
-      @media(min-width: 550px){
-          width: 90%;
-      }
-
-      @media(min-width: 620px){
-        width: 80%;
-     }
-
-      @media(min-width: 700px){
-      width: 70%;
-      }
-      
-      @media(min-width: 700px){
-        width: 50%;
-      }
-    }
-    
-    button{
-      width: 10rem;
-      height: 2.8rem;
-      margin-top: 1rem;
-    }
-    
-  }
-  
-
   
   @media(max-width: 350px){
     flex-wrap: wrap;  

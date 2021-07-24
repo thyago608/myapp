@@ -3,6 +3,8 @@ import { Card } from "../../components/Card";
 import { useHistory } from "react-router-dom";
 import { Main } from "./styles";
 
+const Bounce = require('react-reveal/Bounce');
+
 export function Home() {
   const history = useHistory();
 
@@ -17,6 +19,7 @@ export function Home() {
   return (
     <div id="page">
       <Header />
+      <Bounce left>
       <Main >
         <Card title="Preventivas" onClick={handleNavigateToSelectTeam} />
         <Card
@@ -24,6 +27,7 @@ export function Home() {
           onClick={handleNavigateToPreventiveRegistration}
         />
       </Main>
+      </Bounce>
     </div>
   );
 }

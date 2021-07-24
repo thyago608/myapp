@@ -18,6 +18,10 @@ type Preventive = {
   term:string;
 };
 
+const Zoom = require('react-reveal/Zoom');
+const Bounce = require('react-reveal/Bounce')
+
+
 export function Preventive() {
   const { team } = useParams<Params>();
   const history = useHistory();
@@ -81,6 +85,7 @@ export function Preventive() {
         <Header />
         <h1>Equipe {team}</h1>
       </Wrapper>
+      <Bounce left >
       <Main>
         <div className="preventive-completed">
           <h2>Preventivas Concluídas</h2>
@@ -118,10 +123,10 @@ export function Preventive() {
 
         <div className="preventive-accomplish">
           <h2>Preventivas a realizar</h2>
-
           <div className="wrapper-cards-preventive-accomplish">
             {preventive.map((preventive) => {
               return (
+                <Zoom bottom exit>
                 <Card
                   key={preventive.title}
                   title={preventive.title}
@@ -134,11 +139,13 @@ export function Preventive() {
                     )
                   }
                 />
+                </Zoom>
               );
             })}
           </div>
         </div>
       </Main>
+      </Bounce>
     </div>
   );
 }
